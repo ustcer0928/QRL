@@ -4,7 +4,7 @@ from groverMazeLearner import GroverMazeLearner
 # test
 if __name__ == "__main__":
     # choose env
-    envtest = gym.make("FrozenLake-v0", is_slippery=False)
+    envtest = gym.make("FrozenLake-v1", is_slippery=False)
     # init learner
     Elliot = GroverMazeLearner(envtest)
     # good hyperparms (hand-tuned)
@@ -14,7 +14,7 @@ if __name__ == "__main__":
               'eps': 0.01,
               'max_epochs': 3000,
               'max_steps': 15,
-              'graphics': False}
+              'graphics': True}
     # set hyperparms
     Elliot.set_hyperparams(hyperp)
 
